@@ -24,7 +24,7 @@ class Browser(QWebEngineView):
         self.setUrl(QUrl(url))
         
     def on_load_finished(self):
-        email = "ẽample@gmail.com"
+        email = "example@gmail.com"
         password = "password"
         self.page().runJavaScript(f"document.getElementById('identifierId').value='{email}';document.querySelector('#identifierNext button').click();")
         self.page().runJavaScript(f"setTimeout(function(){{document.querySelector('input[type=password]').value='{password}';document.querySelector('#passwordNext button').click()}}, 2000);")
